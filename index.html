@@ -109,12 +109,13 @@
               </div>
             </div>
           </div>
+
           <!-- Ambulance Service Card -->
           <div class="card card-border bg-base-100 shadow-md">
             <div class="card-body">
               <div class="flex justify-between items-center">
                 <div class="bg-red-200 p-3 rounded-lg">
-                  <img src="assets/ambulance.png" alt="icon" class="h-6" />
+                  <img src="./assets/ambulance.png" alt="icon" class="h-6" />
                 </div>
                 <div><i class="fa-regular fa-heart text-lg"></i></div>
               </div>
@@ -135,6 +136,39 @@
                 <button
                   class="btn bg-[green] text-white w-1/2 rounded-lg"
                   onclick="callNumber('Ambulance Service', '1994-999999')"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electricity Helpline Card -->
+          <div class="card card-border bg-base-100 shadow-md">
+            <div class="card-body">
+              <div class="flex justify-between items-center">
+                <div class="bg-red-200 p-3 rounded-lg">
+                  <img src="./assets/emergency.png" alt="icon" class="h-6" />
+                </div>
+                <div><i class="fa-regular fa-heart text-lg"></i></div>
+              </div>
+              <span class="font-bold text-xl">Electricity Helpline</span>
+              <span>Electricity Outage</span>
+              <span class="font-bold text-3xl">16216</span>
+              <span
+                class="badge bg-gray-100 border-none p-4 text-black rounded-2xl"
+                >Electricity</span
+              >
+              <div class="flex justify-between items-center mt-4">
+                <button
+                  class="btn w-1/2 mr-2 rounded-lg"
+                  onclick="copyContent('Electricity Helpline', '16216')"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+                <button
+                  class="btn bg-[green] text-white w-1/2 rounded-lg"
+                  onclick="callNumber('Electricity Helpline', '16216')"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
