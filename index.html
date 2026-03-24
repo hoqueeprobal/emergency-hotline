@@ -51,7 +51,10 @@
             <span id="coin">100</span>
             <img src="./assets/coin.png" alt="heart" class="h-6 ml-1" />
           </div>
+
+          <!-- click handler that decreases the copy count -->
           <div
+            onclick="decreaseCount('copy', 1)"
             class="btn bg-green-600 text-white px-6 rounded-3xl hover:bg-red-500 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-200"
           >
             <span id="copy" class="mr-1">0</span> Copy
