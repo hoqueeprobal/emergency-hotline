@@ -16,3 +16,13 @@ function decreaseCount(element, decrement) {
     let count = document.getElementById(element);
     count.innerText = Math.max(0, parseInt(count.innerText) - decrement);
 }
+
+// Copy to Clipboard Feature
+function copyContent(title, number) {
+    navigator.clipboard.writeText(number).then(function () {
+        increaseCount("copy", 1);
+        alert('Copied ' + title + ": " + number);
+    }, function (err) {
+        console.error('Could not copy text: ', err);
+    });
+}
