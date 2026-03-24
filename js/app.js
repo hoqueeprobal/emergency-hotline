@@ -4,3 +4,15 @@ function getTextContent(element) {
     let number = document.getElementById(element).innerText;
     return number;
 }
+
+// Counter Increase Function
+function increaseCount(element, increment) {
+    let count = document.getElementById(element);
+    count.innerText = parseInt(count.innerText) + increment;
+}
+
+// Counter Decrease Function
+function decreaseCount(element, decrement) {
+    let count = document.getElementById(element);
+    count.innerText = Math.max(0, parseInt(count.innerText) - decrement);
+}
