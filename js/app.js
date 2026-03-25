@@ -38,3 +38,15 @@ function callNumber(title, number) {
     addCallHistory(title, number);
     alert('Calling ' + title + ": " + number);
 }
+
+// Function to increase coin count
+function increaseCount(element, increment) {
+    let count = document.getElementById(element);
+    let currentValue = parseInt(count.innerText);
+
+    let newValue = currentValue + increment;
+    if (newValue > 100) {
+        newValue = 100;
+    }
+    count.innerText = newValue;
+}
