@@ -70,3 +70,15 @@ function addCallHistory(title, number) {
     historyList.appendChild(newEntry);
 }
 
+// Clear History Feature
+function clearHistory() {
+    var historyList = document.getElementById("call-history");
+    for (let i = historyList.children.length - 1; i >= 0; i--) {
+        let child = historyList.children[i];
+        if (child.classList.contains("call-entry")) {
+            historyList.removeChild(child);
+        }
+    }
+    alert("Call history cleared.");
+}
+
