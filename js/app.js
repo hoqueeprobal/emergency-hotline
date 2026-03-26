@@ -1,5 +1,4 @@
 // Text Getter Utility
-
 function getTextContent(element) {
     let number = document.getElementById(element).innerText;
     return number;
@@ -27,30 +26,20 @@ function copyContent(title, number) {
     });
 }
 
-// Call Feature with Coin Validation
+// // Call Feature with Coin Validation and Call Coin Refund
+let spentCoins = 0;
 function callNumber(title, number) {
     let coins = parseInt(getTextContent("coin"));
     if (coins < 20) {
         alert("Not enough coins. You need at least 20 coins to make a call.");
         return;
     }
+
     decreaseCount("coin", 20);
+    spentCoins += 20; 
     addCallHistory(title, number);
     alert('Calling ' + title + ": " + number);
 }
-
-// Function to increase coin count
-function increaseCount(element, increment) {
-    let count = document.getElementById(element);
-    let currentValue = parseInt(count.innerText);
-
-    let newValue = currentValue + increment;
-    if (newValue > 100) {
-        newValue = 100;
-    }
-    count.innerText = newValue;
-}
-
 
 // Call History System
 
@@ -79,6 +68,9 @@ function clearHistory() {
             historyList.removeChild(child);
         }
     }
+
+    increaseCount("coin", spentCoins); 
+    spentCoins = 0; 
     alert("Call history cleared.");
 }
 
