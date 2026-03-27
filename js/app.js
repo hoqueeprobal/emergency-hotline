@@ -29,7 +29,7 @@ function copyContent(title, number) {
   );
 }
 
-// // Call Feature with Coin Validation and Call Coin Refund
+// // Call Feature and Call Coin Refund
 let spentCoins = 0;
 function callNumber(title, number) {
   let coins = parseInt(getTextContent("coin"));
@@ -86,3 +86,4 @@ hearts.forEach((heart) => {
     increaseCount("heart", 1);
   });
 });
+
